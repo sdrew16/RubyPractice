@@ -59,7 +59,7 @@ loop do
     end
 
     # print out area code for a user
-    puts "The area code for #{city} is #{dial_book[city]}" 
+    puts "The area code for #{city.capitalize} is #{dial_book[city]}" 
   end
 
   # enter area code --> city name dialogue
@@ -75,9 +75,8 @@ loop do
     end
   end
 
+  # quit out
   if ans=='q'
     exit
   end
-
-
 end
