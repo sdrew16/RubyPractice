@@ -10,15 +10,13 @@ users = [
 
 def authenticate_user(known_users)
   for attempts in 0...3 
-    p 'username: '
+    print 'username: '
     uname = gets.chomp.downcase
-    p 'password: '
+    print 'password: '
     pword = gets.chomp
 
     known_users.each do |user|
-      if user[:username] == uname && user[:password] == pword
-         return 'success'
-      end
+      return 'success' if user[:username] == uname && user[:password] == pword
     end
   end 
 
