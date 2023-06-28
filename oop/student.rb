@@ -6,7 +6,8 @@ class Student
   @last_name
   @email
   @user_name
-  @password
+  @password # passwords are never stored as strings - they are hashed. MD5 is a popular hashing algorithm bcrypt uses md5 (bcrypt also uses salt)
+  
 
   def initialize(fname, lname)
     unless lname && fname
