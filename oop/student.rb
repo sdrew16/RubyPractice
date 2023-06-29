@@ -5,6 +5,8 @@ require 'colorize'
 
 
 class Student
+  # make the functionality of PasswordTools available to Student objects
+  # DON'T REINVENT THE WHEEL! 
   include PasswordTools # note that the class name gets used here, but the module file name gets used above
   attr_accessor :first_name, :last_name, :email, :user_name, :password
 

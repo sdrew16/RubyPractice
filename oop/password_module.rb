@@ -1,4 +1,5 @@
 require 'bcrypt'
+# When using Rails, you can use the devise gem to add auth features to a web app
 
 
 module PasswordTools
