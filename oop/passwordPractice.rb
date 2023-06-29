@@ -1,4 +1,8 @@
-require 'bcrypt'
+# adding in my password module:
+# I could just type in require_relative 'password_module' 
+# But if I want to just use require like a normal module, I have to add the current directory to my load path
+$LOAD_PATH << '.'
+require 'password_module'
 
 my_password = BCrypt::Password.create("my password")
 puts my_password
