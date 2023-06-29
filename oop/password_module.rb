@@ -2,11 +2,14 @@ require 'bcrypt'
 
 
 module PasswordTools
-  def self.create_hash_digest(raw_password)
+  # To use the tools below in another class, we need to remove the self.'s so the methods will 
+  # be loaded into the class that's using them (will be called like student.create_hash_digest)
+
+  def create_hash_digest(raw_password)
     BCrypt::Password.create(raw_password)
   end
 
-  def self.verify_hash_digest(hashed_password)
+  def verify_hash_digest(hashed_password)
     BCrypt::Password.new(hashed_password)
   end
 
@@ -18,7 +21,7 @@ module PasswordTools
   #   ...
   # ]
   
-  def self.create_secure_users(users_list)
+  def create_secure_users(users_list)
     secured_users_list = []
     users_list.each do |user|
       secured_users_list.append({
@@ -38,7 +41,7 @@ module PasswordTools
   # ]
 
 
-  def self.authenticate_user(username, password, user_auth)
+  def authenticate_user(username, password, user_auth)
     user_auth.each do |user|
       if user[:username] == username && verify_hash_digest(user[:password]) == password
         return user
