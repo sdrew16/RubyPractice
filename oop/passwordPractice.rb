@@ -4,7 +4,7 @@
 $LOAD_PATH << '.'
 require 'password_module'
 
-my_password = BCrypt::Password.create("my password")
+my_password = PasswordTools.create_hash_digest("my password")
 puts my_password
 
 puts "version: " + my_password.version.to_s
