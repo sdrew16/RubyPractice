@@ -1,0 +1,18 @@
+Rails follows a model view controller (MVC) architecture
+    - creates seperations between user (the view) and the business/backend logic (the invisible layer)
+    - Models
+        - resources in app (users,apps,blogposts, objects)
+        - requires persistence or db layer (so has a database associated with it)
+        - db accompanies a model
+        - in rails, use models to communicate with db
+    - Views
+        - front end
+        - html, css, and javascript
+            - rails works with embedded ruby
+        - working with corresponding templates
+    - controllers
+        - brains of your application (manager of the behaviour)
+        - how user requests are interacted with and routed
+    
+Basically, rails is a sussinct way to make a web app that bundles a bunch of preferred stuff for you
+    - Uses puma for the server
